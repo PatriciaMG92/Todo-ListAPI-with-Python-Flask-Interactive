@@ -8,12 +8,9 @@ todos = [
     {"label" : "My second task", "done": False}
 ]
 
-@app.route('/')
-def hello():
-    return 'string'
 
 @app.route('/todos', methods=['GET'])
-def hello_world():
+def get_todos():
     json_text = jsonify(todos)
     return json_text
 
